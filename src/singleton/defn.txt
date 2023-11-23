@@ -1,0 +1,55 @@
+
+Allows us to create a class for which single object can be created.
+
+why ?
+    * A class which having a shared resource and creating an object is expensive.
+    * creating a tcp connection between code and database is expensive process.
+    * if we establish too many connection, that will make two of side down.
+
+If Object Creation is costly then singleton design pattern is used.
+
+ -> To restrict the object creation, we should make constructor PRIVATE
+
+ -> If constructor is private we can not create even a single object so we have to modify in class
+
+    eg :
+        class DBConn {
+            private DBConn() {
+
+            }
+            public static DBConn getInstance() {
+                return new DBConn();
+            }
+        }
+
+        DBConn db1 = DBConn.getInstance();
+        DBConn db2 = DBConn.getInstance();
+
+        // here this is also returning the 2 different instances
+        // by modifying some things
+
+
+    eg :
+        class DBConn {
+            private static DBConn instance = null;
+
+            private DBConn() {
+
+            }
+
+            public static DBConn getIntance() {
+                if(instance == null) {
+                    instance = new DBConn();
+                }
+                return instance;
+            }
+        }
+
+
+    If more than one thread trying to create object, there might be chance there to create multiple instances
+
+
+    so we have to use double check lock
+    * check the object without lock
+    * acquire lock
+    * check the object with lock
