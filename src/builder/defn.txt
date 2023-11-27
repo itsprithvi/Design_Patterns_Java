@@ -1,0 +1,18 @@
+It is also a creational design pattern.
+
+Problem statement :
+    If class has more number of attributes
+    we want to validate the object before object creation so let's think we are validate at constructor
+    If we use large constructor we difficult to understand which element is which
+    Sometimes we don't have all attributes at the time of object creation
+    If we use same method signature [ multiple constructor ]  then compile time error will thrown where some attributes have same parameter datatype
+    We can use telescopic constructor but still we use multiple constructor
+
+    We need something which is similar to Map allows us to have different values for keys and should have compile time check
+        for key.
+        Also it should have compile time check for values as well
+        Object of one class can do all these so we can use one helper class for this
+
+        Helper class is to get all the required details to create student object after validation passes
+
+        So we use Builder class it takes all attributes and validate
