@@ -1,0 +1,13 @@
+               Prototype Design Pattern
+            ******************************
+
+Problem statement :
+    Given an object of a class, we need to create a copy of this object.
+    ( create a new object with the exact same attributes )
+    If we copy straightly from other objects, then client needs to know implementation of the object,
+        in some cases, there are private attributes, which can't be copied.
+
+
+    eg :
+    Let's say we create a prototype object of classmate notebook.\
+    All the objects can be copied from the prototype and just give values of frontpage and funfact.
