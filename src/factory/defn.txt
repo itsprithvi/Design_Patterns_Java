@@ -1,0 +1,6 @@
+
+
+At some scenarios, Object's class doesn't know what exact sub-classes it have to create. Object's class is designed so that
+objects were specified by subclasses.
+
+

@@ -1,0 +1,29 @@
+
+Adapter Design Pattern :
+    adapter design pattern is a structural design pattern , means
+
+    * how should we structure code base
+    * what all classes should be there
+    * what all attributes and behaviour should be there
+
+    adapter -> Intermediate layer which converts one form to another form
+
+
+
+    In the software system we may connect to third party system , that scenarios we can use adapter design pattern
+[ sometimes we use aws, azure , gcp depends on the business needs ]
+
+Problem Statement :
+
+    1. If we need to migrate from 3rd party service in any scenario, it should be easy .
+    2. If 3rd party company goes down there we will be able to migrate to some other 3rd party.
+
+    eg : phonepe
+
+
+    Adapter design pattern ensures that our codebase remains maintainable incase we are talking to 3rd party
+    1. If our code base has tight coupling with 3rd party then our code base violates DI and It will not be maintanable.
+    2. Whenever we are connecting to a 3rd party then never connect with them directly, always use an interface.
+
+# How to use adapter pattern
+1. Whenever we are connecting to a 3rd party service, create an interface with all methods that we need from 3rd party.
